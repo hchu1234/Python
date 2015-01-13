@@ -1,0 +1,16 @@
+Advanced Programming, Fall 2014.
+
+HW0 - Dollar Word. Due Sunday Sep 7th at 9pm on Blackboard.
+
+Find all dollar words in a reasonably-sized vocabulary list you find on the Web.
+(case-insensitive)
+
+Google dollar word if you haven't heard of it.
+
+The input and output should be standard input and standard output.
+
+Submit your dollar.py and the list of dollar words found by your program.
+
+How short can your code be? Try to make it as clean and elegant as possible.
+
+And how much time did you spend on this homework?

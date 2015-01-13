@@ -1,0 +1,838 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>CS 3813/780, Advanced Programming, Fall 2014</title>
+  </head>
+
+
+  <body>
+    <h1>CS 3813/780, Advanced Programming, Fall 2014</h1>
+
+    <table border=1 cellpadding=3 cellspacing=1>
+<tr>
+<td><b>Time and Location</b></td>
+<td>MW, 9:15 -- 10:30 am, SB A135B
+<br>
+<!-- <font color="red">Refreshments provided! (I know it's too early!)</font> -->
+</td>
+</tr>
+<tr>
+<td><b>Instructor</b></td>
+<td>
+<a href="http://acl.cs.qc.edu/~lhuang">Prof. Liang Huang</a> (<kbd>huang at cs</kbd>)
+<br>
+</td>
+</tr>
+<tr>
+<td><b>Teaching Assistants</b></td>
+<td>Dr. Feifei Zhai (<kbd>ffzhai2012 at gmail</kbd>)
+ and Lei Jiang (<kbd>jlwatereast at gmail</kbd>)
+</td>
+</tr>
+<td><b>Course Admin</b></td>
+<td>Ms. Xiuyi Huang (<kbd>xiuyi@cs</kbd>)
+<tr><td><b>Course Homepage</b></td>
+<td><a href="http://acl.cs.qc.edu/~lhuang/teaching/advprg/">http://acl.cs.qc.edu/~lhuang/teaching/advprg/</a>
+<tr>
+<!-- <td><b>Office Hours</b></td> -->
+<!-- <td>MW, 10:40 -- 11:15 am, SB A227  <br> -->
+<!--  Additional office hours available before quizzes and exams. -->
+<!-- </td> -->
+</tr>
+<tr>
+<td><b>Textbooks</b></td>
+<td><a href="http://mitpress.mit.edu/algorithms/">[CLRS] Introduction to Algorithms, 3rd or 2nd edi.</a> (default reference). 
+<BR>
+<!-- <br>(assignments refer to the <b>3rd edition</b>).<br> -->
+<a href="http://www.aw-bc.com/info/kleinberg/">[KT] Kleinberg and Tardos, Algorithm Design</a> (also recommended)
+<BR>
+<a href="http://www.openbookproject.net/thinkcs/python/english2e/">How to Think Like a Computer Scientist: Learning Python</a> (also recommended)</td>
+</tr>
+<tr>
+<td><b>Grading</b></td>
+<td>weekly homework: 30%, quizzes: 10+15=25%, final project: 20%.<br>
+    in-class miniquizzes: 15%.
+    class participation: 10%.<br>
+homework policy: 
+HW is graded only by completeness, <b>not</b> by correctness.
+Therefore, no late HW is accepted.
+</td>
+</table>
+
+<p>
+
+<hr>
+
+
+<h3>Syllabus</h3>
+
+The purpose of this course is five-fold, with the first three being more important:
+<ul>
+  <li>to give you a much deeper understanding of algorithms by implementing them in Python
+  <li>to prepare you for industrial interviews with top firms (Google, Facebook, Microsoft, Amazon, etc)
+  <li>to prepare you for ACM International Collegiate Programming Contests (ICPC)
+  <li>to convert you from a conventional C++/Java programmer to an elegant Pythonic programmer
+  <li>to train you to think like a computer scientist: think recursively, abstractly, and rigorously.
+</ul>
+We assume you have already taken both Datastructures and Algorithms, though the latter
+can be taken in parallel with this course upon instructor approval.
+The focus of this course is not on theoretical aspects such as complexities and proofs,
+but a solid understanding of theory is assumed, though we'll review them along the way.
+<p>
+
+<h3>Topics Covered and High-Level Schedule</h3>
+<ol>
+  <li>Python Tutorial, Review of Basic Data Structures and Sorting
+    <!-- <ul> -->
+    <!--   <li>HW1 out ~M 1/27: divide & conquer, qsort/qselect, msort, BSTs, memoization -->
+    <!--   <li>Quiz 1 on W 2/5 => check if you have enough prerequisite background -->
+    <!--   <li>HW2 out ~M 2/10: heaps & heapsort, hash, balancing BSTs -->
+    <!-- </ul> -->
+  <li>Dynamic Programming
+    <!-- <ul> -->
+    <!--   <li>HW3 out ~M 3/3 (both chain DP and tree DP) -->
+    <!--   <\!-- <li>Midterm on M 3/17 -\-> -->
+    <!-- </ul> -->
+  <li>Graph Algorithms: Dijkstra, Prim, Kruskal
+    <!-- <ul> -->
+    <!--   <li>HW4 out ~W 3/19 (DFS/BFS, SCCs, Dijkstra/Bellman-Ford/Floyd-Warshall) -->
+    <!--   <li>Quiz 2 on M 4/7 (before spring break) -->
+    <!--   <li>HW5 out ~W 4/23 (Kruskal/Prim, Ford-Fulkerson/Edmonds-Karp) -->
+    <!-- </ul> -->
+</ol>    
+<!-- <li>Introduction: Some Interesting Problems -->
+<!-- <li>Runtime Analysis and Big-O Notation: Master Theorem -->
+<!-- <li>Divide and Conquer, Sorting and Selection: Quicksort, Quickselect, and Mergesort -->
+<!-- <li>Data Structures: Heaps and Heapsort, Hash Tables, and Binary Search Trees -->
+<!-- <li>Dynamic Programming -->
+<!-- <li>Graph Algorithms I: DFS, BFS, Topological Sort, Strongly Connected Components -->
+<!-- <li>Graph Algorithms II: Shortest Paths (Dijkstra) and Minimum Spanning Tree (Kruskal and Prim) -->
+<!-- <li>Graph Algorithms III: Network Flow (Ford-Fulkerson) -->
+<!-- <li>Computational Geometry: Convex Hulls (if time permits) -->
+<!-- <li>NP-Completeness -->
+
+<!-- Homework -->
+<!-- <ul> -->
+<!-- <li> -->
+<!-- The homework assignments are on the design and analysis of algorithms, -->
+<!-- and there is <b>no</b> programming involved. -->
+<!-- Homework submissions will be graded only for completeness, and <b>not for correctness</b>. -->
+<!-- We will release solutions after each homework is due,  -->
+<!-- and it is your sole responsibility to check -->
+<!-- the correctness of your solutions against our solutions. -->
+<!-- The quiz questions will be related to those in the homework. -->
+<!-- </ul> -->
+
+<hr>
+
+<h3>Resources</h3>
+
+HW0 and HW1 will be trivial (to get you familiarized with Python while reviewing datastructures).
+HW2 will be more interesting, and HW3-5 will be challenging,
+with the use of those Online Judge Systems supporting Python, 
+such as:
+
+<ul>
+  <li><a href="http://codeforces.com">codeforces</a> (recommended: each problem has annotated tags such as "dp", "dfs", etc.)
+  <li><a href="http://oj.leetcode.com">leetcode oj</a> (you can practice "writing on the whiteboard" there)
+  <li><a href="http://acm.zju.edu.cn">zoj</a> (Zhejiang University)
+  <li><a href="http://acm.timus.ru/?locale=en">timus</a>
+  <li>project euler (math)
+  <li>rosalind (bioinfo)
+</ul>
+
+The last two are different from the rest in the sense that they ask you to submit your output 
+to given testcases rather than programs (so that you can code in any language, 
+and their online judge system is as easy as a diff).
+There are many other online judge systems that do <b>not</b> support Python
+(traditionally ACM/ICPC uses C/C++/Java/Pascal),
+such as the classical <a href="http://uva.onlinejudge.org/"><b>uva</b></a> 
+(Universidad de Valladolid), <b>poj</b> (Peking University), tju, hit, hust, bjtu, etc.
+(almost all major Chinese universities run their own online judge systems);
+you can hone your C/C++/Java skills there if you have extra time.
+Thanks to <a href="http://acl.cs.qc.edu/~zhuoran">Zhuoran Yu</a> for compiling this list.
+<p>
+To prepare for coding interviews, you have to practice on some of the above
+(say, solving at least 20 problems on codeforces, with at least two from each topic).
+To prepare for ACM/ICPC, you have to practice a lot (solving at least 100 problems
+on zoj/poj).
+
+<p>
+For an algorithms class I taught before (at USC), see <a href="http://acl.cs.qc.edu/~lhuang/teaching/cs570/">here</a> (lots of details on analysis of complexity).
+
+<p>
+
+
+<i>Have fun in lectures and HWs!</i>
+
+<hr>
+<h3>Detailed Schedule and Materials</h3>
+
+<p>
+<table border=1 CCcellpadding=3 cellspacing=2>
+<col width="10" />
+<col width="50" />
+<col width="1000" />
+<tr><td>Week<td>Date<td>Topics and Readings (CLRS and KT)
+<tr><td>1   <td>W 9/3<td>
+    <ul>
+      <li>Administrativia
+      <li>Brief Review: topological sort, priority queue, Dijkstra<!-- quicksort, mergesort, BSTs, memoized Fibonacci (DP) -->
+      <li>Python Intro
+      <li><a href="sec1-python.pdf">slides for Section 1</a> (weeks 1-3)
+      <li><a href="hw0/hw0.txt">HW0</a> out on W 9/3, due Su 9/7: dollar words
+    <!-- longest path on binary tree; randomized qselect; qsort=>BST, search/insertion on BST; memoized Ackermann -->
+<tr><td>2     <td>M 9/8<td>
+    <ul>
+      <li>HW0 discussions; Pythonic style (sum/max: list comprehension)
+      <li>Python Tutorial: quicksort
+<tr><td>2   <td>W 9/10<td>
+    <ul>
+      <li>More on Python Tutorial
+      <li>quicksort vs. binary search tree; inorder/insertion/deletion on BST
+<tr><td>3     <td>M 9/15<td>
+    <ul>
+      <li>More on Python Tutorial
+      <li>quickselect (CLRS 9.2, KT 13.5)
+      <li><a href="hw1/hw1.txt">HW1 out</a>
+<tr><td>4   <td>M 9/22<td>
+    <ul>
+      <li>Discussions of HW1 solutions
+      <li>Quiz 1
+    </ul>
+</tr>
+<tr><td>5   <td>M 9/29<td>
+    <ul>
+      <li>Discussions of Quiz 1: qselect on BSTs; best-case: O(1), worst-case: O(n)
+      <li>lowest common ancestor
+      <li><a href="hw2/hw2.txt">HW2 out</a>
+    </ul>
+</tr>
+<tr><td>5   <td>W 10/1<td>
+    <ul>
+      <li>lowest common ancestor (cont'd)
+      <li>top k numbers closest to a query x (unsorted and sorted)
+      <li>triples x+y=z (hash and sweeping; O(n^2))
+    </ul>
+</tr>
+
+<tr><td>6   <td>M 10/6<td>
+    <ul>
+      <li>lowest common ancestor: feifei's nicer solution and liang's further embellishment
+      <li>top k numbers closest to a query x (unsorted and sorted)
+    </ul>
+</tr>
+
+<tr><td>6   <td>W 10/8<td>
+    <ul>
+      <li>triples x+y=z (hash and sweeping; O(n^2))
+      <li>heap: push (bubble-up) and pop (bubble-down): O(logn)
+      <li>heapify: n bubble-ups: O(nlogn)
+      <li>heapify: n bubble-downs: O(n)<br>
+	1/2 + 2/4 + 3/8 + ... = (1/2 + 1/4 + 1/8 + ...) + (0 + 1/4 + 2/8 + 3/16 + ...) <br>
+                           = 1 + (1/4 + 1/8 + 1/16 + ...) + (1/8 + 2/16 + 3/32 + ...) = 1 + 1/2 + ... = 2.<br>
+	intuition: n bubble-down: the majority of nodes are cheap (from lower-levels downto leaves: ~1);<br>
+	n bubble-ups: the majority are expensive (from leaves upto root: ~logn)
+      <li><a href="hw3/hw3.txt">hw3 out</a>
+    </ul>
+</tr>
+
+<!-- 	<a href="quiz1/fib.py">fib.py</a> <a href="quiz1/msort.py">msort.py</a> <a href="quiz1/qselect.py">qselect.py</a> -->
+<!--       <li>Discussions of HW1 solutions: -->
+<!-- 	<a href="hw1/ackermann.py">ackermann.py</a> -->
+<!-- 	<a href="hw1/longest.py">longest.py</a> -->
+<!-- 	<a href="hw1/qselect.py">qselect.py</a> (modified from Kent's) -->
+<!-- 	<a href="hw1/qsort.py">qsort.py</a> (modified from Angelica's) -->
+<!--       <li>heap intro (CLRS Ch. 6) -->
+<!--       <li><a href="hw2/hw2.txt">HW2</a> out  on T 2/11, due W 2/26: -->
+<!-- 	heapsort, hashtable, simplified dijkstra, datastream. -->
+<!-- <tr><td>     <td><del>W 2/12</del><td> -->
+<!--     <ul> -->
+<!--       <li><b>NO CLASS - UNIVERSITY HOLIDAY</b> -->
+<!-- <tr><td>4     <td><del>M 2/17</del><td> -->
+<!--     <ul> -->
+<!--       <li><b>NO CLASS - UNIVERSITY HOLIDAY - CLASS MOVED TO THURSDAY</b> -->
+<!-- <tr><td>     <td>W 2/19<td> -->
+<!--     <ul> -->
+<!--       <li>heaps: array representation, bubble-up, bubble-down -->
+<!--       <li>hw2 problem 1 -->
+<!--       <li>gnuplot demo on O(n^2), O(nlogn), O(n), etc. -->
+<!-- <tr><td>     <td><b>Th 2/20<br>(monday schedule)</b><td> -->
+<!--     <ul> -->
+<!--       <li>heapq -->
+<!--       <li>applications of priority queue: k-way mergesort, choose top k from stream, etc. -->
+<!--       <li>Dijkstra -->
+<!-- <tr><td>5    <td>M 2/24<td> -->
+<!--     <ul> -->
+<!--       <li>lowest common ancestor -->
+<!--       <li><b>first in-class problem solving session</b> -->
+<!-- <tr><td>    <td>W 2/26<td> -->
+<!--     <ul> -->
+<!--       <li>help on hw2 -->
+<!--       <li>DP intro: longest increasing subsequence -->
+<!-- <tr><td>6    <td>M 3/3<td> -->
+<!--     <ul> -->
+<!--       <li>DP: knapsack: 0-1 & unbounded -->
+<!-- <tr><td>    <td>W 3/5<td> -->
+<!--     <ul> -->
+<!-- <tr><td>7    <td>M 3/10<td> -->
+<!--     <ul> -->
+<!--       <li><b><a href="hw3/hw3.txt">HW3 out: DP</a></b> -->
+<!-- <tr><td>    <td>W 3/12<td> -->
+<!--     <ul> -->
+<!--       <li><b>second in-class problem solving session</b> -->
+<!-- <tr><td>8    <td>M 3/17<td> -->
+<!--     <ul> -->
+
+<!-- <tr><td>    <td>W 3/19<td> -->
+<!--     <ul> -->
+
+<!-- <tr><td>9    <td>M 3/24<td> -->
+<!--     <ul> -->
+<!--       LCS & KMP -->
+<!-- <tr><td>    <td>W 3/26<td> -->
+<!--     <ul> -->
+<!--       <a href="hw3/zero_one_mem.py">sample code</a> for DP (0-1 Knapsack): memoized recursion (top-down) vs. bottom-up -->
+<!--       <br>when is top-down faster (sparse), and when is bottom-up faster (dense)? -->
+<!-- <tr><td>10    <td>M 3/31<td> -->
+<!--     <ul> -->
+<!--       <li>miniquiz 3 -->
+<!--       <li>HW3 solutions -->
+<!-- <tr><td>    <td>W 4/2<td> -->
+<!--     <ul> -->
+<!--       <li>LICS: O(n^4) -> O(n^3) -->
+<!--       <li>LCS w/ a query subseq -->
+<!-- <tr><td>11    <td>M 4/7<td> -->
+<!--     <ul> -->
+<!--       <li>Viterbi and topological sort -->
+<!--       <li>Viterbi vs. Dijkstra -->
+<!--       <li>LCS w/ a query subseq -->
+	 
+<!-- <tr><td>    <td>W 4/9<td> -->
+<!--     <ul> -->
+<!--       <li>Viterbi on DAGs: backward vs. forward updates -->
+<!--       <li>Implementation details of topological sort -->
+<!--       <li>Matrix-Chain Multiplication -->
+<!--       <li>Viterbi on Hypergraphs -->
+<!--       <li><a href="hw4/hw4.txt">HW4 out</a> -->
+<!-- <tr><td><del>12</del>    <td>M 4/14-T 4/22<td> -->
+<!--     SPRING BREAK -->
+<!-- <tr><td>12    <td>W 4/23<td> -->
+<!--     <ul> -->
+<!--       <li><b>Quiz 2</b> -->
+</table>
+
+
+<!-- <table border=1 CCcellpadding=3 cellspacing=2> -->
+<!-- <col width="10" /> -->
+<!-- <col width="50" /> -->
+<!-- <col width="1000" /> -->
+<!-- <col width="200" /> -->
+<!-- <tr><td>Week<td>Date<td>Topics and Readings (CLRS and KT)<td>HW/Quiz/Exams -->
+<!-- <tr><td>1   <td>Mon 1/9<td> -->
+<!--     <ul> -->
+<!--       <li>Administrativia -->
+<!--       <li>Intro: longest increasing subsequence -->
+<!--         <ul><li>greedy: wrong. O(n)<li>brute force: correct. O(2^n). powerset construction</ul> -->
+<!--       <li>Big-O informal intro -->
+<!--       <li>quicksort example -->
+<!--     </ul> -->
+<!--   <td>- -->
+<!-- <tr><td>     <td>Wed 1/11<td> -->
+<!--     <ul> -->
+<!--       <li>longest increasing subsequence (wikipedia) -->
+<!-- 	<ul> -->
+<!-- 	  <li>dynamic programming: correct, O(n^2). -->
+<!-- 	  <li>backtracing to print the solution. -->
+<!-- 	  <li>proof of correctness by (complete) induction -->
+<!-- 	  <li>it's possible for O(nlogn) with binary search (<i>beyond this course</i>) -->
+<!-- 	</ul> -->
+<!--       <li>insertion sort (CLRS 2.3) -->
+<!-- 	<ul> -->
+<!-- 	  <li>proof of correctness by (simple) induction -->
+<!-- 	  <li>improvements: binary search or linkedlist, but <b>not both</b> -->
+<!-- 	  <li>complexity remains O(n^2) anyways -->
+<!-- 	  <li>review of arrays vs. linkedlists (KT 2.3) -->
+<!-- 	    <table  border=1 CCcellpadding=3 cellspacing=2> -->
+<!-- 	      <tr><td>-<td>random<br>access <td> insertion/<br>deletion <td> find -->
+<!-- 		  <tr><td>array <td> O(1) <td> O(n) <td> normal: O(n)<br>sorted: O(logn)<br> hashed: ~O(1) -->
+<!-- 		      <tr><td>linkedlist <td>O(n) <td>O(1) <td> O(n) -->
+<!-- 	    </table> -->
+<!-- 	</ul> -->
+<!--       <li>quick sort (CLRS 7.1-2) -->
+<!-- 	<ul> -->
+<!-- 	  <li>worst-case scenario -->
+<!-- 	  <li>best-case scenario -->
+<!-- 	  <li>connection to binary search trees (CLRS 12.1-2) but <b>not</b> binary search (CLRS 2.3, KT 2.3) 	     -->
+<!--     </ul> -->
+<!-- 	<td>HW1 out (due Mon 1/23). -->
+<!-- <tr><td>2<td>Mon 1/16<td><font color="red">Martin-Luther King's Day. no class.</font><td>- -->
+<!-- <tr><td> <td>Wed 1/18<td> -->
+<!--     <ul> -->
+<!--       <li>Quiz 1 (20 min.) -->
+<!--       <li>quicksort analysis (CLRS 7.3-4, KT 13.5) -->
+<!-- 	<ul> -->
+<!-- 	  <li>randomization: shuffling and random pivot -->
+<!--       <li>intuitions why worst-case is rare after randomization -->
+<!-- 	  <li>average-case analysis (expected runtime for randomized quicksort) -->
+<!--               <br>(high-level intuitions are important, but <i>details of this proof are not required</i>) -->
+<!-- 	</ul> -->
+<!--     </ul> -->
+<!--     <td><b>QUIZ 1</b> -->
+<!-- <tr><td>3<td>Mon 1/23<td> -->
+<!--      <ul> -->
+<!--       <li>discussions of Quiz 1 -->
+<!--       <li>mergesort (CLRS 2.3, KT 5.1) -->
+<!--         <ul><li>merging two sorted list is linear -->
+<!--             <li>substitution method for analyzing complexity -->
+<!--             <li>on linkedlist -->
+<!--         </ul> -->
+<!--       <li>quicksort vs. mergesort -->
+<!--         <ul><li>why/when quicksort is generally faster? (in place, in memory) -->
+<!--             <li>when is mergesort useful? (linkedlist, files on disk) -->
+<!--             <li><b>stable sort</b>: mergesort and insertion sort are stable  -->
+<!--                   (with careful implemenations) -->
+<!--             <li>quicksort unstable with in-place implementation -->
+<!-- with randomized pivot  -->
+<!--  	    <li>why stability matters: sorting with multiple keys (last name, first name) -->
+<!--        </ul> -->
+<!--       <li>priority queue / heapsort (CLRS 6) -->
+<!-- 	<ul><li>complete binary tree, linear (array) representation -->
+<!-- 	    <img src="heap_array.jpg"> -->
+<!-- 	</ul> -->
+<!--      </ul>                                                 -->
+<!--     <td>HW1 due -->
+<!-- <tR><td><td>Wed 1/25<td> -->
+<!--      <ul> -->
+<!--       <li>Big-O, Big-Theta, Big-Omega: formal intro (CLRS 3, KT 2.2). -->
+<!-- 	<img src="big_theta.jpg"> -->
+<!--       <li>Substitution and Recursion Tree Methods (brief, CLRS 4.3-4) -->
+<!--       <li>Master theorem (CLRS 4.5), examples: -->
+<!--        <ul> -->
+<!--          <li>T(n) = 2T(n/2) + O(n) &nbsp;&nbsp; (mergesort) -->
+<!-- 	 <li>T(n) = 2T(n/2) + O(1) &nbsp;&nbsp;  (binary tree traversal, cf. quiz 1) -->
+<!-- 	 <li>T(n) = T(n/2) + O(1)  &nbsp;&nbsp;&nbsp;&nbsp; (binary search) -->
+<!-- 	 <li>T(n) = T(n/2) + O(n) &nbsp;&nbsp;&nbsp;&nbsp;   (quickselect) -->
+<!--        </ul> -->
+<!--       <li>heapsort (cont'd) -->
+<!-- 	<ul> -->
+<!-- 	  <li>priority queue vs. queue: emergency room vs. checkout line -->
+<!-- 	  <li>heap operation: push/insert (add at the end; bubble-up); O(log n) -->
+<!-- 	  <li>heap operation: pop/extract-min (pop root; move the last element to root; bubble-down); O(log n) -->
+<!--           <li>bubble-up and bubble-down are the building-blocks for other heap operations.           -->
+<!-- 	</ul> -->
+<!-- 	<TD>HW 2 out  -->
+<!-- <tr><td>4<td>Mon 1/30<td> -->
+<!--     <ul> -->
+<!--       <li>heapsort (cont'd) -->
+<!-- 	<ul> -->
+<!--           <li>use priority queue to model stack and queue (CLRS problem 6.5-7, trivial) -->
+<!--           <li>heap operation: change-key (bubble-up or bubble-down) -->
+<!-- 	  <li>heap operation: build heap (from array) -->
+<!-- 	    <ul> -->
+<!-- 	      <li>method 0: sort it first (overkill!): O(nlogn) -->
+<!-- 	      <li>method 1: insert each element: O(nlogn) (CLRS problem 6-1) -->
+<!-- 	      <li>method 2: heapify (bottom-up or recursive). tight analysis: O(n). (CLRS 6.3)<br> -->
+<!-- 	      <li>formal analyses of methods 1 and 2: <br> -->
+<!--                   useful fact 1: # of elements with height h is n/2^{h+1}. <br> -->
+<!-- 		  useful fact 2: 1/2 + 2/4 + 3/8 + ... = (1/2 + 1/4 + 1/8 + ...) + (0 + 1/4 + 2/8 + 3/16 + ...) <br> -->
+<!--                            = 1 + (1/4 + 1/8 + 1/16 + ...) + (1/8 + 2/16 + 3/32 + ...) = 1 + 1/2 + ... = 2.<br> -->
+<!-- 		   <font color="blue">(this derivation of fact 2 is more accessible than the one in the textbook).</font> -->
+<!--                   <ul> -->
+<!-- 		    <li>method 2: sum O(h) n/(2^{h+1}) = O(n) sum h/2^h = O(n x 2) = O(n).<br> -->
+<!-- 		    <li>method 1: sum O(logn - h) n/(2^{h+1}) = O(nlogn) x sum 1/2^h - O(n) sum h/2^h = O(nlogn) - O(n)=O(nlogn).  -->
+<!-- 		  </ul> -->
+<!-- 	      <li>high-level intuitions: method 2 is faster because the majority (lowest levels) requires very little work (bubble-down to the leaves), while method 1 is slow because the majority requires the most work (bubble-up to the root). -->
+<!--             </ul>	       -->
+<!--           <li>heapsort is O(nlogn): build heap O(n), pop each element O(nlogn). -->
+<!-- 	  <li>example application: k-way mergesort: merging becomes O(k+nlogk)=O(nlogk). (CLRS problem 6.5-9) -->
+<!-- 	</ul> -->
+<!-- <tr><td><td>Wed 2/1<td> -->
+<!--     <ul> -->
+<!--       <li>review of heapify: -->
+<!-- 	<ul> -->
+<!-- 	  <li>recursive version: heapify left, heapify right, bubble-down. -->
+<!-- 	    <br> -->
+<!-- 	    T(n)=2T(n/2) + O(logn).<br> -->
+<!-- 	    use Master Theorem case 1 (when f(n) small): T(n)=O(n). -->
+<!--             <br><font color="blue">this analysis is more intuitive than the sum version in the textbook.</font> -->
+<!--           <li>(where as "keep pushing" is T(n)=T(n-1)+O(logn)=O(nlogn).) -->
+<!-- 	  <li>applications: select kth-smallest element: O(n+klogn). -->
+<!-- 	      fast when k << n. -->
+<!-- 	</ul> -->
+
+<!--       <li>quickselect (CLRS 9.2, KT 13.5) -->
+<!-- 	<ul> -->
+<!-- 	  <li>idea from quicksort: partition, but throw half away -->
+<!-- 	  <li>best-case O(n): T(n)=T(n/2) + O(n). <br> -->
+<!-- 	    use Master Theorem case 3 (check regularlity!), or geometric series. -->
+<!-- 	  <li>worst-case O(n^2): T(n)=T(n-1)+O(n). -->
+<!-- 	  <li>randomized version: expected linear time -->
+<!-- 	</ul> -->
+<!--       <li>determinstic worst-case linear-time select (CLRS 9.3) -->
+<!-- 	<img src="median_of_medians.jpg" align="right"> -->
+<!-- 	<ul> -->
+<!-- 	  <li>idea: find a balanced pivot to partition w/o randomization -->
+<!-- 	  <li>5 steps in each recursive call: -->
+<!-- 	    <ul> -->
+<!--  	      <li>divide into n/5 groups of 5: O(n) -->
+<!-- 	      <li>insertion-sort each group: O(n) -->
+<!-- 	      <li>recursively find x=median-of-medians: T(n/5). -->
+<!-- 	      <li>partition using x: O(n). at least 3n/10 < x, and at least 3n/10 > x. -->
+<!-- 	      <li>recursion on one half: T(7n/10). -->
+<!-- 	    </ul> -->
+<!-- 	  <li>total: T(n)=T(n/5)+T(7n/10)+O(n).<br> -->
+<!-- 	     use substitution method, guess T(n)=O(n), i.e., T(n)<=cn for some c. -->
+<!--              work out the math. T(n)=O(n). -->
+<!--           <li>Why magic number of 5? what about 3, 4, 6, 7? (CLRS problem 9.3-1).<br> -->
+<!-- 	    5 is the minimum magic number. e.g., why 4 is not enough: <br> -->
+<!-- 	    T(n) = T(n/4) + T(3n/4) + O(n) = O(n^2). -->
+<!-- 	  <li>this algorithm is mostly of theoretical interest (constant overhead too large). -->
+<!-- 	</ul>     -->
+<!--     </ul> -->
+<!-- <tr><td>5<td>Mon 2/6<td> -->
+<!--     <ul> -->
+<!--       <li>review of worst-case linear selection -->
+<!--       <li>example applications of selection -->
+<!-- 	<ul> -->
+<!-- 	  <li>worst-case O(nlogn)-time quicksort based on selection (CLRS problem 9.3-3) -->
+<!-- 	  <li>find k elements closest to median in O(n) time. (CLRS problem 9.3-7) -->
+<!-- 	  <li>find median of two sorted lists in O(logn) time. (CLRS problem 9.3-8) -->
+<!-- 	</ul><br> -->
+<!--       <li>lower-bounds for sorting (CLRS 8.1)<br> -->
+<!-- 	  decision tree model: each non-leaf node is one comparison, and each leaf node is a complete ordering. -->
+<!--          the tree should have at least n! leaves: 2^h >= n!, so h >= log n!. <br> -->
+<!--          (n/2)^(n/2) <= n! <= n^n, so log n! = \Theta(nlogn). so h = \Omega(nlogn). -->
+<!--          <br><img src="sorting_lowerbound.gif"> -->
+          
+<!--     </ul> -->
+<!--   <td>HW2 due -->
+<!-- <tr><td><td>Wed 2/8<td> -->
+<!--     Topics Covered So Far -->
+<!--     <ul> -->
+<!--       <li>Design Paradigms: Divide-and-Conquer -->
+<!--       <li>Analysis Notions: Big-{O, Theta, Omega}, Worst-Case, Best-Case, Average-Case -->
+<!--       <li>Analysis Techniques: Master, Substitution, Recursion Tree -->
+<!--       <li>Data Structures: BST, Heap (Priority Queue), LinkedList -->
+<!--       <li>Algorithms -->
+<!-- 	<ul> -->
+<!-- 	  <li>Sorting: Insertion, Quicksort, Mergesort, Heapsort -->
+<!-- 	  <li>Selection: Quickselect, Worst-case linear select -->
+<!-- 	</ul> -->
+<!--       <li>Lower-Bounds: Comparison Sort: O(nlogn) -->
+<!--      </ul> -->
+<!--     Review Problems -->
+<!--     <ul> -->
+<!--       <li>heapsort is not stable. example: [3a, 3b, 3c]. pop out: 3a, 3c, 3b. -->
+<!--       <li>O(nlogn)-time to check if there exist x+y=S. -->
+<!--       <li>O(logn)-time to find the number in a (balanced) BST that is closest to query x. -->
+<!--       <li>find the k smallest numbers in a data-stream of n numbers with only O(k) space. -->
+<!--       <li>k-way mergesort. Merging is O(k+nlogk)=O(nlogk). <br> -->
+<!--          Overall: T(n)=kT(n/k) + O(n log k). Can't use Master Theorem (why?).  -->
+<!-- 	 <br>Use substitution instead. Result: O(nlogn). -->
+<!--       <li>Pitfalls of using substitution method: must prove the exact form. (CLRS 4.3) -->
+<!--     </ul><td>Extra office hour Fri 9:30-11:30, SAL 235. -->
+<!-- <tr><td>6<td>Mon 2/13<td> -->
+<!--     <b>MIDTERM 1</b> (covers all lectures so far). <td>No office hours on Mon/Tue. -->
+<!-- <tr><td><td>Wed 2/15<td> -->
+<!--     Discussions of Midterm 1 problems.<td>regrade session in office hour. -->
+<!-- <tr><td>7<td>Mon 2/20<td><font color="red">PRESIDENT'S DAY -- NO CLASS</font> -->
+<!-- <tr><td><td>Wed 2/22<td> -->
+<!--    Dynamic Programming -->
+<!--    <ul> -->
+<!--      <li>Example Problems -->
+<!--        <ul><li>Review of Longest Increasing Subsequence -->
+<!-- 	   <li>The Unbounded Knapsack Problem (see wikipedia)  -->
+<!-- 	     <img src="knapsack.png" align="right"> -->
+<!--        </ul> -->
+<!--      <li>Steps -->
+<!--        <ul><li>Define subproblem -->
+<!-- 	 <li>Recurrence relation -->
+<!-- 	 <li>Reconstructing Optimal Solution -->
+<!--        </ul> -->
+<!--      <li>Implementations -->
+<!--        <ul><li>Bottom-Up -->
+<!-- 	 <li>Top-Down recursive + memoization (e.g. Fibonacci) -->
+<!--        </ul> -->
+<!--      <li>Requirements -->
+<!--        <ul><li>Optimal Substructure (check your subproblem definition) -->
+<!-- 	 <li>Sharing of Subproblems (cf. memoization) -->
+<!--        </ul> -->
+<!-- <tr><td>8<td>Mon 2/27<td> -->
+<!--     Dynamic Programming (cont'd) -->
+<!--     <ul><li>The 0-1 Knapsack Problem (see wikipedia) <p> -->
+<!-- 	    opt[w][i] -- optimal value of a bag of weight w, using items 1..i -->
+
+<!-- 	<li>Longest Common Subsequence (Sequence Alignment)  <img src="LCS.jpg" align="right"> <p> -->
+<!--            opt[i][j] -- LCS b/w A_{1..i} and B_{1..j}<br> -->
+<!--            opt[i][j] = max { opt[i][j-1], opt[i-1][j], <br> -->
+<!--            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+<!--                opt[i-1][j-1]+<b>1</b>(A_i==B_j) } -->
+<!--           <p>applications: sequence alignment (e.g. DNA), edit distance, spelling correction, etc. -->
+<!-- 	<li>Matrix-Chain Multiplication -->
+<!--     </ul> -->
+<!-- <tr><td><td>Wed 2/29<td> -->
+<!-- 	Dynamic Programming (cont'd) -->
+<!-- 	<ul><li>Matrix-Chain Multiplications<p> -->
+             
+<!-- 	      basics: multiplying a p x q matrix with a q x r matrix results in an p x r matrix and takes p x q x r multiplications.<p> -->
+	      
+<!--               matrix-chain A_1 A_2 ... A_n. <br>each A_k has dimensions p_{k-1} x p_k (neighboring pairs share one dimension).<p> -->
+
+<!-- 	      example: A x B x C<br><img src="matrices.gif" align="below"> -->
+<!-- 	      <p> -->
+<!-- 	      A x (B x C) is better (2x3x3+3x3x2).<br><img src="matrix1.gif"> vs. <img src="matrix2.gif"> -->
+<!-- 	    <p> -->
+
+<!-- 	      objective: find the order of multiplications that minimizes the total # of scalar multiplications.<p> -->
+	      
+	    
+<!-- 	      m[i, j] -- optimal # of multiplications for subchain A_i x ... x A_j. <br> -->
+<!-- 	      m[i, j] = min_{i<=k&lt;j} m[i, k] + m[k+1, j] + p_{i-1} p_k p_j<br> -->
+<!-- 	      m[i, i] = 0. -->
+<!--               <p> -->
+<!-- 	      <img src="http://www.cis.temple.edu/~wangp/9615-AA/Lecture/06-01.jpg"> -->
+<!-- 	      <p> -->
+<!--               complexity: O(n^3) time, O(n^2) space.<img src="matrix-chart.gif" align="right"> -->
+<!-- 	      <p> -->
+<!--               fill in the chart. e.g. A1 : 3 x 2, A2 : 2 x 4, A3 : 4 x 3, A4 : 3 x 2  -->
+
+<!-- <tr><td>9<td>Mon 3/5<td> -->
+<!--         Quiz 2 and discussions; DP on graphs and hypergraphs (matrix-chain) -->
+<!-- <tr><td><td>Wed 3/7<td> -->
+<!--         Viterbi algorithm on DAG; topological sort -->
+<!-- <tr><td>10<td><td><font color="red">SPRING BREAK - NO CLASS </font> -->
+<!-- <tr><td>11<td>Mon 3/19<td> -->
+<!--         <ul> -->
+<!-- 	  <li>review on topological sort -->
+<!-- 	    <ul> -->
+<!-- 	      <li>pseudocode: BFS-style -->
+<!-- 	      <li>theorem: the following three are equivalent for directed graph G -->
+<!-- 		<ul> -->
+<!-- 		  <li>G is acyclic -->
+<!-- 		  <li>G has a valid topological ordering -->
+<!-- 		  <li>the BFS-style topological sort succeeds -->
+<!-- 		</ul> -->
+<!--                 simple proofs by contradiction. -->
+<!-- 	    </ul> -->
+<!-- 	  <li>BFS -->
+<!-- 	  <li>connected components for undirected graphs -->
+<!-- 	  <li>strongly-connected components (SCCs) for directed graphs -->
+                    
+<!-- <tr><td><td>Wed 3/21<td> -->
+<!--         tree traversal review: <br> -->
+<!-- 	[DFS] pre-order, post-order, and (for binary trees only) in-order, -->
+<!-- 	<br>[BFS] level-order. -->
+<!--         <p> -->
+<!--         DFS on directed graphs; <br> -->
+<!--         DFS edge classification: tree, back, forward, cross.<br> -->
+<!--         DFS for undirected graphs: tree and back edges only. -->
+<!-- <tr><td>12<td>Mon 3/26<td> -->
+<!--         DFS time intervals (easier to understand than edge classification);  -->
+<!--         <br>DFS for SCCs: Kosaraju's Algorithm (two DFS's, CLRS 22.5); <br>SCC-DAG -->
+<!-- <tr><td><td>Wed 3/28<td> -->
+<!--         DFS for SCCs: Tarjan's Algorithm (single DFS, see wikipedia).<br> -->
+<!--         All topological orders for Matrix-Chain Multiplication DP.<br> -->
+<!--         Viterbi algorithm for shortest, longest, and # of paths on DAG.<br> -->
+<!-- <tr><td>13<td>Mon 4/2<td> -->
+<!--         <b>MIDTERM 2</b> -->
+<!-- <tr><td><td>Wed 4/4<td> -->
+<!--         discussions of midterm 2; discussion of HW4; regrading session. -->
+<!-- </table> -->
+
+<!-- <p> -->
+<!-- Homework Assignments (due at the beginning of the class on paper only; please print your code) -->
+<!-- <table border=1 CCcellpadding=3 cellspacing=2> -->
+<!-- <tr><td><td>out<td>due<td>programming (please <b>print your code</b>!)<td>theory (CLRS, <b>3rd edi</b>) <td>Solutions -->
+<!-- <tr><td>HW1<td>Wed 1/11<td>Mon 1/23<td>  -->
+<!--     <ul><li>longest increasing subsequence (both brute force and DP) -->
+<!-- 	<li>quicksort; identify worst-case and best-case scenarios -->
+<!-- 	<li>binary search within insertion sort -->
+<!--     </ul> -->
+<!--   <td>7.2-{1,2,5}. <br> 2.3-{4,5,6}. -->
+<!--   <td><a href="hw1_solutions.zip">solutions</a> -->
+<!-- <tr><td>HW2<td>Wed 1/25<td>Mon 2/6<td> -->
+<!--     <ul><li>mergesort: both array and linkedlist versions. compare quicksort vs. mergesort on both datastructures. -->
+<!--             (try sorting all permutations up to n=9 or 10). -->
+<!-- 	<li>a priority queue <b>class</b> implementing all heap operations taught in class -->
+<!-- 	<li>quickselect (randomized) -->
+<!-- 	  <td>choose 8 out of the 10:<br> -->
+<!--               4-1, 4.5-5*, <br> -->
+<!-- 	      6.1-4, 6.3-2, 6.5-{7,9} (or 6.5-{6,8} in 2nd edi.), 6-1 <br> -->
+<!-- 	      9.2-4, 9.3-{1,8} -->
+<!--           <td><a href="hw2_solutions.zip">solutions</a> -->
+<!-- <tr><td>HW3<td>Wed 2/22<td>Mon 3/5<td> -->
+<!--     implement each problem in two ways: bottom-up, and recursive top-down with memoization. -->
+<!--     <ul> -->
+<!--       <li>the 0-1 knapsack problem -->
+<!--       <li>longest common subsequence -->
+<!--       <li>matrix-chain multiplication  -->
+<!-- 	<td>15.3-{2,3,4},<br>15-{1,3,5,7}. -->
+<!--      <td><a href="hw3_solutions.zip">solutions</a> -->
+<!-- <tr><td>HW4<td>Wed 3/7<td>Mon 4/2<td> -->
+<!--     <ul> -->
+<!--       <li>topological sort (BFS style): implement two modes -->
+<!-- 	<ul> -->
+<!-- 	  <li>output any topological order -- what's the complexity? -->
+<!-- 	  <li>output *all* topological orders -- <br> try it on the matrix-chain multiplication hypergraph with n=5. how many orders do you get? what's the complexity? -->
+<!-- 	</ul> -->
+<!--       <li>Viterbi algorithm for both shortest and longest path in a DAG -->
+<!--       <li>DFS to compute strongly connected components (SCCs) -->
+<!--     </ul> -->
+<!--     <td>choose 8 from: <br>22.3-{5,6,8,9,12}, <br>22.4-{2,3,5}, <br>22.5-{3,4,7}, <br>22-{1,4}  -->
+<!--     <td><a href="hw4_solutions.pdf">Solutions</a><br><a href="topol_all.py">all topol orders</a> -->
+<!-- <tr><td>HW5<td>Wed 4/11<td>Mon 4/30<td> -->
+<!--     Due (on paper) at the review session on at SAL 322, 9-11am on April 30. -->
+<!--     <ul> -->
+<!--       <li>Dijkstra<li>Bellman-Ford<li>Floyd-Warshall<li>Prim -->
+<!--     </ul> -->
+<!--   <td>choose 8 from:<br> -->
+<!--     24.1-3, 24.2-3 <br> -->
+<!--     24.3-{2,4-8,10}<br> -->
+<!--     25.2-{4,6,8,9}<br> -->
+<!--     24-{1,2,3,6}, 25-1<br> -->
+<!--     23.1-{1,5,9}, 23.2-{2,5,8}, 23-1<br> -->
+<!-- <tr><td>HW6<td>Wed 4/11<td>Sat 5/5<td> -->
+<!--     Due on blackboard (Python only). -->
+<!--     <ul> -->
+<!--       <li>Kruskal (<code>kruskal.py</code>)<p> -->
+<!-- Input Format: -->
+<!-- <br> -->
+<!-- Your code must read from the <b>standard input</b>, -->
+<!-- which contains several graphs. -->
+<!-- Each graph starts with |V| and |E|, the numbers -->
+<!-- of nodes and edges, respectively, -->
+<!-- followed by one line listing the edges (omitted if empty). -->
+<!-- Each edge is in the form of u-v:w(u,v). -->
+<!-- The nodes are labeled from 0 to |V|-1, -->
+<!-- and the edges are listed in <b>lexicographical order</b>. -->
+<!-- A line of <code>-1 -1</code> terminates the input. -->
+<!-- <p> -->
+<!-- Output Format: -->
+<!-- <br> -->
+<!-- Your code must print to the <b>standard output</b>, -->
+<!-- which contains one line for each graph in the input. -->
+<!-- If there is a spanning tree, print the minimum tree weight first, -->
+<!-- followed by a list of edges in the MST, in the <b>same format and order</b> as in the input; -->
+<!-- otherwise, simply print <code>NO SPANNING TREE</code>. -->
+<!-- <p> -->
+<!-- Sample Input: -->
+<!-- <pre> -->
+<!-- 3 3 -->
+<!-- 0-1:1 0-2:3 1-2:2 -->
+<!-- 2 0 -->
+<!-- -1 -1 -->
+<!-- </pre> -->
+<!-- Sample Output: -->
+<!-- <pre> -->
+<!-- 3 0-1:1 1-2:2 -->
+<!-- NO SPANNING TREE -->
+<!-- </pre> -->
+
+<!--       <li>Max-Flow (Ford-Fulkerson) (<code>flow.py</code>) -->
+<!-- <p> -->
+<!-- I/O format: almost the same as in Kruskal, except that  -->
+<!-- the the graph is directed, w(u,v) is interpreted as c(u,v), and the output  -->
+<!-- lists the maximum flow amount and the list of edge flows. -->
+<!-- The source and target nodes are 0 and |V|-1, respectively. -->
+<!-- If there is no flow, simply write <code>NO FLOW</code>. -->
+<!-- <p> -->
+<!-- 	  Sample Input: -->
+<!-- 	  <pre> -->
+<!-- 3 3 -->
+<!-- 0-1:1 0-2:3 1-2:2 -->
+<!-- 2 1 -->
+<!-- 1-0:1 -->
+<!-- -1 -1 -->
+<!-- </pre> -->
+<!-- Sample Output: -->
+<!-- <pre> -->
+<!-- 4 0-1:1 0-2:3 1-2:1 -->
+<!-- NO FLOW -->
+<!-- </pre> -->
+
+<!-- <b>NOTE: for both problems, the input might contain graphs of up to 1000 nodes and 100000 edges.</b> -->
+<!-- Efficiency is part of the grading. -->
+
+<!-- <p> -->
+<!-- NOTE: Your code must be in Python and must respect the input/output format in order to receive credits, -->
+<!-- since we will test your code automatically and will <b>not</b> read or modify your code! -->
+<!-- If you need help, consult the grader (who's responsible for grading) but not the instructor. -->
+<!-- <p> -->
+<!-- We will test your code like this (and you should do this also): -->
+<!-- <pre> -->
+<!-- cat input_file | python your_code > your_output -->
+<!-- diff -bwd your_output correct_output -->
+<!-- </pre> -->
+
+<!--     </ul> -->
+<!-- </table> -->
+<!-- <p> -->
+<!-- Tentative Weekly Schedule (subject to change!) -->
+<!-- <p> -->
+<!-- <table border=1 CCcellpadding=3 cellspacing=2> -->
+<!-- <tr> -->
+<!-- <td>Week 1</td> <td>Intro; Big-O; Insertion Sort; Quicksort</td>  <td rowspan=2>HW1</td>  -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 2</td> <td>Divide and Conquer; Quicksort and Quickselect; Quiz 1</td>   -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 3</td> <td>Mergesort; Heaps and Heapsort</td> <td rowspan=2>HW2</td> -->
+<!-- </tr> -->
+<!-- <\!-- <tr> -\-> -->
+<!-- <\!-- <td>Week 4</td> <td>Hashtables; BSTs</td> -\-> -->
+<!-- <\!-- </tr> -\-> -->
+<!-- <tr> -->
+<!-- <td>Week 4</td> <td>Big-O formal; Master Theorem</td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 5</td> <td>Lower-Bound for sorting; Review</td>    -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 6</td> <td><b>Midterm 1 and Discussions</b></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 7</td> <td>President's Day; Dynamic Programming</td> <td rowspan=2>HW3</td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 8</td> <td>Dynamic Programming; Quiz 2</td>   -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 9</td> <td>DFS, BFS, SCC, Dijkstra, Viterbi</td> <td rowspan=2>HW4</td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 10</td> <td> <b>SPRING BREAK</b> </td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 11</td> <td>Bellman-Ford, Floyd-Warshall; Quiz 3</b></td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 12</td> <td>Minimum Spanning Tree (Prim and Kruskal); Review</td> <td rowspan=2>HW5</td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 13</td> <td><b>Midterm 2 and Discussions</b></td>   -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 14</td> <td>Network Flow</td><td rowspan=2>HW6</td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 15</td> <td>Quiz 4; NP Completeness</td> -->
+<!-- </tr> -->
+<!-- <tr> -->
+<!-- <td>Week 16</td> <td>Final Review</td> -->
+<!-- </tr> -->
+
+<!-- </table> -->
+
+    <hr>
+    <address><a href="http://acl.cs.qc.edu/">Liang Huang</a></address>
+<!-- Created Thu Oct 27 1452:13 PDT 2011 -->
+<!-- hhmts start -->
+Last modified: Wed Jan 18 23:31:27 PST 2012
+<!-- hhmts end -->
+  </body>
+</html>
+
+<!--  LocalWords:  usc LH CLRS edi Kleinberg ZHS
+ -->

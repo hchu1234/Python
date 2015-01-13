@@ -1,0 +1,20 @@
+In fibonacci, the number of time the recursive depth is a lot smaller, when compare with Ackermann. It can be done in O (n) if we use cache and reuse the old value and O(n^2) if we use non-caching method (can be proof by drawing a binary tree).
+On the other hand, Ackermann number grow linearly when n is 0 or 1, but it will grow at O(2^n) when n is greater than 1. This is why Ackermann is much harder to compute then Fibonacci.  
+
+A(3,5)
+Non cache = 42438
+Cached = 766
+Difference = 41672
+
+3.What is the time complexity of your algorithm? (Longest path)
+The over all complexity of my algorithm is 8n+1.
+
+4. What is the time complexity of your algorithm? (Quick select)
+7(n + n/2 + n/4 + n/8 ) + 2
+
+Debriefing
+1. I spent about 17 hours on this assignment
+2. Moderate then became diffcult
+3. Mostly alone but I do ask students for help.
+4. 70%
+5. When we want to implement a good efficient algorithm in a real world application, would it be even harder due to the complexity of the nature of a "real life"  problem? 

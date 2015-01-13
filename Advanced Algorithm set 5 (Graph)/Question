@@ -1,0 +1,19 @@
+what are the complexities of a) and b)?
+Binary O(VlogV + E Log V)
+
+Array O(V*V+E)
+
+Also, construct a graph where array is twice as fast as binary heap,
+and another graph where binary heap is twice as fast as array.
+These graphs should be non-trivial (V>=10); same below.
+A graph with 10 + node and each node connect to one other node. ( A simple path)
+
+
+B ) What is the complexity?
+O(ELog V)
+
+
+C ) What is the complexity?
+O (V log V + E log V)
+
+Accoring to the Algorithm, Any complete graph ( All node connected to all other node) will give Prim a lot  better result than Kruskal 

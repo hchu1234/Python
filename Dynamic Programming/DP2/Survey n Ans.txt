@@ -1,0 +1,36 @@
+﻿0. What's your name?
+1. Approximately how many hours did you spend on this assignment?
+2. Would you rate it as easy, moderate, or difficult?
+3. Did you work on it mostly alone, or mostly with other people?
+4. How deeply do you feel you understand the material it covers (0%–100%)? 
+5. Any other comments?
+
+
+0) Singwai Chan
+1) 40
+2) Moderate+++
+3) With other people
+4) 60
+5) Very challenging homework in a good way. Made me and my friends curse a lot and I felt bad. :D
+
+
+Q1
+
+1.2,3) I wasn't able to do Knapsack for bottom up. I tried to tackle the problem in different way, flatten it to 0/1 and similar method I had for top down problem.
+
+1.3) Yes, floating point number will still work for my solution. Because I never used number of items and other information as an array index.
+
+Q3
+
+top down is about 5 times faster when both input is the same.
+a = a*100
+b = a
+Top = 101
+0.0160000324249
+Bottom = 10201
+0.0309998989105
+
+
+Bottom up is about 5 times faster when the result is No CLS
+a = 'a'*100
+b = 'b'*100
